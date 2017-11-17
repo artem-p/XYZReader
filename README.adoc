@@ -1,5 +1,5 @@
-= RSS Reader with material design
+= RSS Reader with Material Design
 
-Updating old app according to material design specification
+Updating old app according to Material Design specification
 
 Udacity Material Design course project.
