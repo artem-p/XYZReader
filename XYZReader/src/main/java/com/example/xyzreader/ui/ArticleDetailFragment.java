@@ -232,7 +232,13 @@ public class ArticleDetailFragment extends Fragment implements
                                 + "</font>"));
 
             }
-            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n|\n)", "<br />")));
+//            bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY).replaceAll("(\r\n|\n)", "<br />")));
+
+            // Detail screen loads extremely slow due to huge text size
+            // So limit text size
+            // https://discussions.udacity.com/t/p5-activity-transitions-are-extremely-slow/241729/13
+            bodyView.setText(mCursor.getString(ArticleLoader.Query.BODY).substring(0, 1000));
+
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
                         @Override
