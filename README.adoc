@@ -1,5 +1,5 @@
-= XYZ Reader Starter Code
+= RSS Reader with material design
 
-Material Design RSS Reader.
+Updating old app according to material design specification
 
 Udacity Material Design course project.
