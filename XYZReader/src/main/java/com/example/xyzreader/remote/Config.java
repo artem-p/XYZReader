@@ -12,7 +12,7 @@ public class Config {
     static {
         URL url = null;
         try {
-            url = new URL("https://github.com/artem-p/XYZReader/blob/master/xyz.json");
+            url = new URL("https://raw.githubusercontent.com/artem-p/XYZReader/master/xyz.json");
         } catch (MalformedURLException ignored) {
             // TODO: throw a real error
             Log.e(TAG, "Please check your internet connection.");
