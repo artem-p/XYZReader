@@ -44,7 +44,7 @@
                     android:layout_height="match_parent"
                     app:layout_collapseMode="parallax"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/details_photo_placeholder" />
+                    android:background="@color/list_item_background"/>
 
                 <View
                     android:layout_width="match_parent"
