@@ -8,6 +8,7 @@ import android.content.IntentFilter;
 import android.content.Loader;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
@@ -118,6 +119,12 @@ public class ArticleListActivity extends AppCompatActivity implements
         StaggeredGridLayoutManager sglm =
                 new StaggeredGridLayoutManager(calculateNumberOfColumns(this), StaggeredGridLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(sglm);
+
+        showDoneLoadingSnackbar();
+    }
+
+    private void showDoneLoadingSnackbar() {
+        Snackbar.make(mRecyclerView, "Article data loading completed", Snackbar.LENGTH_SHORT).show();
     }
 
     @Override
